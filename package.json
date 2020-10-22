@@ -1,0 +1,22 @@
+{
+  "name": "@adambh/vue-fontawesome-autogen",
+  "version": "1.0.0",
+  "description": "Automates the importing of used fontawesome icons.",
+  "main": "index.js",
+  "scripts": {
+    "gen": "node ./index.js"
+  },
+  "author": "GTANAdam",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "github.com/GTANAdam/vue-fontawesome-autogen"
+  },
+  "keywords": [
+    "auto",
+    "generate",
+    "import",
+    "fontawesome",
+    "fortawesome"
+  ]
+}
