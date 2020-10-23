@@ -6,7 +6,7 @@ module.exports = {
         plugins: [
             new WebpackBeforeBuildPlugin(function(stats, callback) {
                 const {execSync} = require('child_process');
-                console.log(execSync('npm explore vue-fontawesome-autogen -- npm run gen').toString())
+                console.log(execSync('npm explore @adambh/vue-fontawesome-autogen -- npm run gen').toString())
                 callback()
             }, ['run']),
         ],

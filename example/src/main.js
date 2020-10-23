@@ -5,7 +5,7 @@ import App from './App.vue'
 import "@/plugins/fontawesome-autogen.js"
 
 // Import fontawesome shim component
-import Fa from "vue-fontawesome-autogen/Fa.vue";
+import Fa from "@adambh/vue-fontawesome-autogen/Fa.vue";
 Vue.component("fa", Fa);
 
 Vue.config.productionTip = false

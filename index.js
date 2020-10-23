@@ -13,7 +13,8 @@ const iconTypes = [
 ];
 
 const faModule = "@fortawesome";
-const outputFile = `${src}/plugins/fontawesome-autogen.js`;
+const outputFolder = `${src}/plugins`;
+const outputFile = `${outputFolder}/fontawesome-autogen.js`;
 
 // Edit this per requirements
 const matches = [
@@ -158,7 +159,11 @@ const listing = getListing(sortedIcons);
 const t1 = Date.now();
 
 // Write to file
-fs.writeFile(outputFile, listing, function (err) {
-  if (err) return console.log(err);
-  console.log(`- Fontawesome treeshaking list generated. (took ${(t1 - t0)} ms)`);
+fs.mkdir(outputFolder, { recursive: true }, (err) => {
+    if (err) throw err;
+    
+    fs.writeFile(outputFile, listing, function (err) {
+        if (err) return console.log(err);
+        console.log(`- Fontawesome treeshaking list generated. (took ${(t1 - t0)} ms)`);
+      });
 });
