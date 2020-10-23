@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "fa-autogen": "npm explore vue-fontawesome-autogen -- npm run gen"
+    "fa-autogen": "npm explore @adambh/vue-fontawesome-autogen -- npm run gen"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "~1.2.32",

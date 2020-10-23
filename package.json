@@ -1,6 +1,6 @@
 {
   "name": "@adambh/vue-fontawesome-autogen",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Automates the importing of used fontawesome icons.",
   "main": "index.js",
   "scripts": {

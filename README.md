@@ -57,7 +57,7 @@ There's basically two ways to do this, either manually or automatically.
 ### Manually
 Executing the following npm command would run the script:
 ``` sh
-$ npm explore vue-fontawesome-autogen -- npm run gen
+$ npm explore @adambh/vue-fontawesome-autogen -- npm run gen
 ```
 And you should see the success output message such as:
 ```
@@ -79,7 +79,7 @@ var WebpackBeforeBuildPlugin = require('before-build-webpack');
     plugins: [
         new WebpackBeforeBuildPlugin(function(stats, callback) {
             const {execSync} = require('child_process');
-            console.log(execSync('npm explore vue-fontawesome-autogen -- npm run gen').toString());
+            console.log(execSync('npm explore @adambh/vue-fontawesome-autogen -- npm run gen').toString());
             callback();
         }, ['run'])
     ]

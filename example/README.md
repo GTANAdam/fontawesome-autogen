@@ -17,5 +17,5 @@ npm run build
 
 ### Generate list of used fontawesome icons
 ```
-npm explore vue-fontawesome-autogen -- npm run gen
+npm explore @adambh/vue-fontawesome-autogen -- npm run gen
 ```
