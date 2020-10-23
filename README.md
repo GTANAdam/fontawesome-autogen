@@ -29,7 +29,7 @@ The usage is almost identical to how you would noramlly use with vue-fontawesome
 <font-awesome-icon :icon="['far', 'video']" />
 ```
 
-instead, you would just have write the following, which is much more practical:
+instead, you would just have write to the following, which is much more practical:
 
 ```html
 <fa icon="far-video" />
@@ -41,12 +41,12 @@ Basic usage:
 <fa icon="far-video" />
 ```
 
-There's also support for duotone's primary and secondary color attributes, in example:
+There's also support for duotone's primary and secondary color attributes, for example:
 ``` html
 <fa icon="fad-video" primaryColor="red" secondaryColor="white" /> 
 ```
 
-You can also use the advanced attributes, as you would normally with vue-fontawesome, in example:
+You can also use the advanced attributes, as you would normally with vue-fontawesome, for example:
 ``` html
 <fa icon="fas-check" transform="shrink-6" :style="{ color: 'white' }" />
 ```
