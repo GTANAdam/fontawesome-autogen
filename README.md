@@ -29,7 +29,7 @@ The usage is almost identical to how you would noramlly use with vue-fontawesome
 <font-awesome-icon :icon="['far', 'video']" />
 ```
 
-instead, you would just have write to the following, which is much more practical:
+instead, you would just have to write the following, which is much more practical:
 
 ```html
 <fa icon="far-video" />
