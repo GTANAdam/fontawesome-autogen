@@ -1,8 +1,8 @@
 const path = require("path");
 const fs = require("fs");
 
-const src = path.resolve(__dirname, '../..', 'src');
-const node_modules = path.resolve(__dirname, '..');
+const src = path.resolve(__dirname, '../../..', 'src');
+const node_modules = path.resolve(__dirname, '../..');
 
 const iconTypes = [
     {prefix: "fas", libary: "solid", type: ""},

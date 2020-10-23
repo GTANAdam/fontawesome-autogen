@@ -3,7 +3,7 @@
 
 ## Installation
 ``` s
-$ npm install --save-dev vue-fontawesome-autogen
+$ npm install --save-dev @adambh/vue-fontawesome-autogen
 ```
 
 ## Requirements
@@ -18,7 +18,7 @@ Add these definitions to your entry point such your "main.js" file
 import "@/plugins/fontawesome-autogen.js";
 
 // Import shim component for fontawesome
-import Fa from "vue-fontawesome-autogen/Fa.vue";
+import Fa from "@adambh/vue-fontawesome-autogen/Fa.vue";
 Vue.component("fa", Fa);
 ```
 
