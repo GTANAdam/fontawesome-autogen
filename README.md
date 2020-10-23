@@ -1,4 +1,5 @@
-# [vue-fontawesome-autogen](https://github.com/GTANAdam/vue-fontawesome-autogen)
+# vue-fontawesome-autogen ![npm](https://img.shields.io/npm/v/@adambh/vue-fontawesome-autogen)
+
 > This script is written to make managing imported fontawesome icons in VueJS uncumbersome. It implements simple parsing techniques that would generate a file that imports all of your used icons without having to manage them every single time.
 
 ## Installation
