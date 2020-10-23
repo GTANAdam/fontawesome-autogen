@@ -97,4 +97,19 @@ The output of build should include the following line
 - Fontawesome treeshaking list generated. (took 10 ms)
 ```
 
+## Result
+Once the script has finished executing, it should produce a file at **src/plugins/fontawesome-autogen.js** which its content would look like the following:
+```js
+// Auto generated @ Thu Oct 22 2020 19:45:52 GMT+0300 (Eastern European Summer Time)
+
+//fas
+import { faCircle as fasCircle, faAngleDown as fasAngleDown, faBars as fasBars } from '@fortawesome/pro-solid-svg-icons';
+
+//far
+import { faSignOutAlt as farSignOutAlt, faComments as farComments } from '@fortawesome/pro-regular-svg-icons';
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+library.add(fasCircle, fasAngleDown, farSignOutAlt, fasBars, farComments);
+```
+
 ### If you're confused, you can check the [example project](https://github.com/GTANAdam/vue-fontawesome-autogen/tree/main/example) above.
