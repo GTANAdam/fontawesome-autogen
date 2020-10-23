@@ -66,7 +66,7 @@ And you should see the success output message such as:
 
 
 ### Automatically upon build-time
-This is achieved by hooking into webhook's events, so an additonal library is required, in our case, we'll be using before-build-webpack (https://github.com/artemdudkin/before-build-webpack)
+This is achieved by hooking into webhook's events, so an additonal library is required, in our case, we'll be using [before-build-webpack](https://github.com/artemdudkin/before-build-webpack)
 ``` sh
 $ npm install --save-dev before-build-webpack
 ```
@@ -97,4 +97,4 @@ The output of build should include the following line
 - Fontawesome treeshaking list generated. (took 10 ms)
 ```
 
-### If you're confused, you can check the [example project](./example) above.
+### If you're confused, you can check the [example project](https://github.com/GTANAdam/vue-fontawesome-autogen/tree/main/example) above.
