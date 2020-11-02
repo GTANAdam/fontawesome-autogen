@@ -3,6 +3,9 @@
 > As per [demand](https://github.com/FortAwesome/vue-fontawesome/issues/233) from the Vue community using vue-fontawesome, this script was written to make managing imported fontawesome icons in VueJS uncumbersome. It implements simple parsing techniques that would generate a file that imports all of your used icons without having to manage them every single time.
 > 
 
+## Notes
+- This tool will prioritize the pro versions of the installed svg icons set, so if for instance you have both ``free-solid-svg-icons`` and ``pro-solid-svg-icons``, then the tool will use the pro one, otherwise the free one.
+
 ## Installation
 ``` s
 $ npm install --save-dev @adambh/vue-fontawesome-autogen
