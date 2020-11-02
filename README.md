@@ -55,8 +55,9 @@ You can also use the advanced attributes, as you would normally with vue-fontawe
 
 ## Generating icon imports
 There's basically two ways to do this, either manually or automatically.
-#### Notes
-- This tool will prioritize the pro versions of the installed svg icons set, so if for instance you have both ``free-solid-svg-icons`` and ``pro-solid-svg-icons``, then the tool will use the pro one, otherwise the free one.
+
+**Note**: This tool will prioritize the pro versions of the installed svg icons set, so if for instance you have both ``free-solid-svg-icons`` and ``pro-solid-svg-icons``, then the tool will use the pro one, otherwise the free one.
+
 
 ### Manually
 Executing the following npm command would run the script:
