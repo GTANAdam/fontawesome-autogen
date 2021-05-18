@@ -20,7 +20,7 @@ const outputFile = `${outputFolder}/fontawesome-autogen.js`;
 const matches = [
     /(?<=icon:\s"+)fa.*?(?=",)/g, // Get icons within props or data
     /(?<=default:\s"+)fa.*?(?=",)/g, // Get default icon values within props
-    /(?<=<fa\sicon="+).*?(?=")/g // Get icons within components
+    /(?<=<fa\s+icon="+).*?(?=")/g // Get icons within components
 ];
 
 String.prototype.replaceAt = function(index, replacement) {
