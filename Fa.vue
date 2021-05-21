@@ -17,7 +17,7 @@ export default {
     icon: {
       type: String,
       required: true,
-      // validator: (value) => ... // TODO: Check if contains fa(s|r|d|l)
+      // validator: (value) => ... // TODO: Check if contains fa(s|r|d|l|t)
     },
     primaryColor: {
       type: String,
