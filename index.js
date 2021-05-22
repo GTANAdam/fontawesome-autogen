@@ -10,6 +10,7 @@ const iconTypes = [
     {prefix: "fal", libary: "light", type: ""},
     {prefix: "fab", libary: "brands", type: ""},
     {prefix: "fad", libary: "duotone", type: ""},
+    {prefix: "fat", libary: "thin", type: ""},
 ];
 
 const faModule = "@fortawesome";
