@@ -2,18 +2,6 @@
 
 > As per [demand](https://github.com/FortAwesome/vue-fontawesome/issues/233) from the Vue community using vue-fontawesome, this script was written to make managing imported fontawesome icons in VueJS uncumbersome. It implements simple parsing techniques that would generate a file that imports all of your used icons without having to manage them every single time.
 
-## Installation
-
-### Yarn
-```sh
-$ yarn add -D @adambh/vue-fontawesome-autogen
-```
-
-### NPM
-```sh
-$ npm install --save-dev @adambh/vue-fontawesome-autogen
-```
-
 ## Features
 
 - Automatically imports treeshaken fontawesome icons.
@@ -25,6 +13,18 @@ $ npm install --save-dev @adambh/vue-fontawesome-autogen
 
 - Make sure your source code exists within the "src" folder of the project's main directory.
 - Make sure you have installed vue-fontawesome dependencies, if not, please check https://github.com/FortAwesome/vue-fontawesome#installation
+
+## Installation
+
+### Yarn
+```sh
+$ yarn add -D @adambh/vue-fontawesome-autogen
+```
+
+### NPM
+```sh
+$ npm install --save-dev @adambh/vue-fontawesome-autogen
+```
 
 ## Setting up
 
