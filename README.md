@@ -110,8 +110,6 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 library.add(fasCircle, fasAngleDown, farSignOutAlt, fasBars, farComments);
 ```
 
-### If you're confused, you can check the [example project](https://github.com/GTANAdam/vue-fontawesome-autogen/tree/main/example) above.
-
 ## Customized syntax
 If you want a vanilla fontawesome syntax approach, like:
 ```html
@@ -127,3 +125,7 @@ Add these definitions to your entry point such as your "main.js" file
 import Fa from "@adambh/vue-fontawesome-autogen/Fa.vue";
 Vue.component("fa", Fa); // Import shim component for fontawesome
 ```
+
+
+
+### If you're confused, you can check the [example project](https://github.com/GTANAdam/vue-fontawesome-autogen/tree/main/example) above.
