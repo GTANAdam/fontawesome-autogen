@@ -34,7 +34,7 @@ const matches = [
   ///(?<=<fa\s+icon="+).*?(?=")/g // Get icons within components
   //   /icon=['"]([a-z-]+)['"]|:icon=\"\[['"](fa[a-z])['"],.*['"]([a-z-]+)['"]\]/g,
   new RegExp(
-    `<(?:fa|${componentName})\\s+icon=['"]([a-z-]+)['"]|<${componentName}\\s+:icon=\"\[['"](fa[a-z])['"],.*['"]([a-z-]+)['"]\]`,
+    `<(?:fa|${componentName})\s+icon=['"]([a-z-]+)['"]|<${componentName}\s+:icon=\"\[['"](fa[a-z])['"],[ ]{0,1}['"]([a-z-]+)['"]\]|<FontAwesomeIcon\s+icon=['"]([a-z-]+)['"]|<FontAwesomeIcon\s+icon={\[['"](fa[a-z])['"],[ ]{0,1}['"]([a-z-]+)['"]\]}`,
     "g"
   ),
 ];
@@ -96,7 +96,10 @@ function getFiles(path) {
 
   // Filter all non-vue files
   files = files.filter(
-    (file) => file.indexOf(".vue") > -1 || file.indexOf(".js") > -1
+    (file) =>
+      file.indexOf(".vue") > -1 ||
+      file.indexOf(".jsx") > -1 ||
+      file.indexOf(".js") > -1
   );
 }
 
