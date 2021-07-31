@@ -33,7 +33,7 @@ $ npm install --save-dev @adambh/vue-fontawesome-autogen
 
 ## Setting up
 
-Make sure to have imported and fontawesome library and registered the component as per https://github.com/FortAwesome/vue-fontawesome#usage or alternative for react.
+Make sure to have imported the fontawesome library and registered the component as per https://github.com/FortAwesome/vue-fontawesome#usage or alternative for react.
 
 Then add this definition to your entry point such as your "main.js" file
 
