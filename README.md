@@ -158,7 +158,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 library.add(fasCircle, fasAngleDown, farSignOutAlt, fasBars, farComments);
 ```
 
-## Customized syntax (VueJS)
+## Optional customized syntax (VueJS)
 
 If you want a vanilla fontawesome syntax approach, like:
 
