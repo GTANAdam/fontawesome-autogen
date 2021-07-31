@@ -13,7 +13,7 @@
 ## Requirements
 
 - Make sure your source code exists within the "src" folder of the project's main directory.
-- Make sure you have installed vue-fontawesome dependencies, if not, please check https://github.com/FortAwesome/vue-fontawesome#installation
+- Make sure you have installed react/vue-fontawesome dependencies, if not, for VueJS, please check https://github.com/FortAwesome/vue-fontawesome#installation
 
 ## Installation
 
@@ -29,7 +29,7 @@ $ npm install --save-dev @adambh/vue-fontawesome-autogen
 
 ## Setting up
 
-Make sure to have imported and fontawesome library and registered the component as per https://github.com/FortAwesome/vue-fontawesome#usage
+Make sure to have imported and fontawesome library and registered the component as per https://github.com/FortAwesome/vue-fontawesome#usage or alternative for react.
 
 Then add these definition to your entry point such as your "main.js" file
 
