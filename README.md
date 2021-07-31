@@ -113,3 +113,17 @@ library.add(fasCircle, fasAngleDown, farSignOutAlt, fasBars, farComments);
 ### If you're confused, you can check the [example project](https://github.com/GTANAdam/vue-fontawesome-autogen/tree/main/example) above.
 
 ## Customized syntax
+If you want a vanilla fontawesome syntax approach, like:
+```html
+<fa icon="far-video" />
+
+// Advanced stuff
+<fa icon="fad-video" primaryColor="red" secondaryColor="white" /> //  support for duotone's primary and secondary color attributes
+<fa icon="far-check" transform="shrink-6" :style="{ color: 'white' }" /> // support for advanced attributes
+```
+
+Add these definitions to your entry point such as your "main.js" file
+``` js
+import Fa from "@adambh/vue-fontawesome-autogen/Fa.vue";
+Vue.component("fa", Fa); // Import shim component for fontawesome
+```
