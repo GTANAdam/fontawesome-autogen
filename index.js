@@ -249,16 +249,16 @@ if (JSON.stringify(previousListing) === JSON.stringify(currentListing)) {
     } ms)`
   );
   return;
-}
+} else {
+  // Write to file
+  fs.mkdir(outputFolder, { recursive: true }, (err) => {
+    if (err) throw err;
 
-// Write to file
-fs.mkdir(outputFolder, { recursive: true }, (err) => {
-  if (err) throw err;
-
-  fs.writeFile(outputFile, listing, function (err) {
-    if (err) return console.log(err);
-    console.log(
-      `- Fontawesome treeshaking list generated. (took ${Date.now() - t0} ms)`
-    );
+    fs.writeFile(outputFile, listing, function (err) {
+      if (err) return console.log(err);
+      console.log(
+        `- Fontawesome treeshaking list generated. (took ${Date.now() - t0} ms)`
+      );
+    });
   });
-});
+}
