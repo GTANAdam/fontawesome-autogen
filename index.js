@@ -22,16 +22,22 @@ const faModule = "@fortawesome";
 const outputFolder = `${src}/plugins`;
 const outputFile = `${outputFolder}/fontawesome-autogen.js`;
 
+const componentCheck =
+  /[Vue\.component\("]([a-z0-9-]+)["],[ ]{0,1}FontAwesomeIcon\)/g;
+const componentName = getComponentName();
+console.log(componentName);
+
 // Edit this per requirements
 const matches = [
   /(?<=icon:\s"+)fa.*?(?=",)/g, // Get icons within props or data
   /(?<=default:\s"+)fa.*?(?=",)/g, // Get default icon values within props
   ///(?<=<fa\s+icon="+).*?(?=")/g // Get icons within components
-  /icon=['"]([a-z-]+)['"]|:icon=\"\[['"](fa[a-z])['"],.*['"]([a-z-]+)['"]\]/g,
+  //   /icon=['"]([a-z-]+)['"]|:icon=\"\[['"](fa[a-z])['"],.*['"]([a-z-]+)['"]\]/g,
+  new RegExp(
+    `<(?:fa|${componentName})\\s+icon=['"]([a-z-]+)['"]|<${componentName}\\s+:icon=\"\[['"](fa[a-z])['"],.*['"]([a-z-]+)['"]\]`,
+    "g"
+  ),
 ];
-
-// const componentCheck =
-//   /[Vue\.component\("]([a-z0-9-]+)["],[ ]{0,1}FontAwesomeIcon\)/g;
 
 String.prototype.replaceAt = function (index, replacement) {
   return (
@@ -94,28 +100,28 @@ function getFiles(path) {
   );
 }
 
-// function getComponentName() {
-//   var files = [];
-//   getfiles(src);
-//   function getfiles(path) {
-//     // Recursive ((!))
-//     for (const name of fs.readdirSync(path)) {
-//       const entry = `${path}/${name}`;
+function getComponentName() {
+  var files = [];
+  getfiles(src);
+  function getfiles(path) {
+    // Recursive ((!))
+    for (const name of fs.readdirSync(path)) {
+      const entry = `${path}/${name}`;
 
-//       fs.lstatSync(entry).isDirectory() ? getfiles(entry) : files.push(entry);
-//     }
+      fs.lstatSync(entry).isDirectory() ? getfiles(entry) : files.push(entry);
+    }
 
-//     // Filter all non-vue files
-//     files = files.filter((file) => file.indexOf(".js") > -1);
-//   }
+    // Filter all non-vue files
+    files = files.filter((file) => file.indexOf(".js") > -1);
+  }
 
-//   for (const f of files) {
-//     const file = fs.readFileSync(f);
-//     const compo = componentCheck.exec(file);
-//     if (compo === null) return "font-awesome-icon";
-//     return compo[1];
-//   }
-// }
+  for (const f of files) {
+    const file = fs.readFileSync(f);
+    const compo = componentCheck.exec(file);
+    if (compo === null) return "font-awesome-icon";
+    return compo[1];
+  }
+}
 
 function getIcons(files) {
   const icons = [];
@@ -123,6 +129,8 @@ function getIcons(files) {
     const file = fs.readFileSync(f);
 
     for (const r of matches) {
+      console.log(r);
+
       while (null != (icon = r.exec(file))) {
         icon = icon.filter((e) => e != null);
         icon.shift();
@@ -207,9 +215,6 @@ getLibraries();
 // Find all vue files within folders
 getFiles(src);
 // console.log(files);
-
-// const componentName = getComponentName();
-// console.log(componentName);
 
 // parse icons within found files
 const icons = getIcons(files);
