@@ -118,7 +118,7 @@ If you want a vanilla fontawesome syntax approach, like:
 <fa icon="far-video" />
 
 // Advanced stuff
-<fa icon="fad-video" primaryColor="red" secondaryColor="white" /> //  support for duotone's primary and secondary color attributes
+<fa icon="fad-video" primaryColor="red" secondaryColor="white" /> //  support for duotone's primary and secondary color attr
 <fa icon="far-check" transform="shrink-6" :style="{ color: 'white' }" /> // support for advanced attributes
 ```
 
