@@ -4,7 +4,13 @@
 
 ## Installation
 
-```s
+### Yarn
+```sh
+$ yarn add -D @adambh/vue-fontawesome-autogen
+```
+
+### NPM
+```sh
 $ npm install --save-dev @adambh/vue-fontawesome-autogen
 ```
 
@@ -69,7 +75,7 @@ var WebpackBeforeBuildPlugin = require('before-build-webpack');
             const {execSync} = require('child_process');
             console.log(execSync('npm explore @adambh/vue-fontawesome-autogen -- npm run gen').toString());
             callback();
-        }, ['run'])
+        }, ['run', 'watchRun'])
     ]
   },
 // ...
@@ -77,6 +83,12 @@ var WebpackBeforeBuildPlugin = require('before-build-webpack');
 
 then build the project as you normally would
 
+Yarn
+```sh
+$ yarn build
+```
+
+NPM
 ```sh
 $ npm run build
 ```
@@ -118,11 +130,11 @@ If you want a vanilla fontawesome syntax approach, like:
 ```html
 <fa icon="far-video" />
 
-// Advanced stuff
-<fa icon="fad-video" primaryColor="red" secondaryColor="white" /> // support for
-duotone's primary and secondary color attributes
-<fa icon="far-check" transform="shrink-6" :style="{ color: 'white' }" /> //
-support for advanced attributes
+// support forduotone's primary and secondary color attributes
+<fa icon="fad-video" primaryColor="red" secondaryColor="white" /> 
+
+// support for advanced attributes
+<fa icon="far-check" transform="shrink-6" :style="{ color: 'white' }" /> 
 ```
 
 Add these definitions to your entry point such as your "main.js" file
