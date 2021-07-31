@@ -14,7 +14,7 @@ module.exports = {
           );
           callback();
         },
-        ["run"]
+        ["run", "watchRun"]
       ),
     ],
   },
