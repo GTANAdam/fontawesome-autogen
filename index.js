@@ -25,7 +25,7 @@ const outputFile = `${outputFolder}/fontawesome-autogen.js`;
 const componentCheck =
   /[Vue\.component\("]([a-z0-9-]+)["],[ ]{0,1}FontAwesomeIcon\)/g;
 const componentName = getComponentName();
-console.log(componentName);
+// console.log(componentName);
 
 // Edit this per requirements
 const matches = [
@@ -129,7 +129,7 @@ function getIcons(files) {
     const file = fs.readFileSync(f);
 
     for (const r of matches) {
-      console.log(r);
+      //console.log(r);
 
       while (null != (icon = r.exec(file))) {
         icon = icon.filter((e) => e != null);
