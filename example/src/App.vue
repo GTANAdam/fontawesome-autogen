@@ -1,14 +1,12 @@
 <template>
   <div id="app">
-    <fa icon="fas-user-secret" />
-
-    <!-- Duotone params are supported if you have pro-duotone-svg-icons -->
-    <!-- <fa icon="fad-user-secret" primaryColor="blue" secondaryColor="white" /> -->
+    <font-awesome-icon icon="user-secret" />
+    <font-awesome-icon :icon="['fas', 'user-secret']" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
-}
+  name: "App",
+};
 </script>
