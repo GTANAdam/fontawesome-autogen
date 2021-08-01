@@ -59,6 +59,8 @@ import "@/plugins/fontawesome-autogen.js";
 
 ### VueJS
 
+Nothing needs changing, even if your registered vue component name is different, it will be parsed.
+
 ```html
 <font-awesome-icon icon="video" />
 <font-awesome-icon :icon="['fas', 'video']" />
