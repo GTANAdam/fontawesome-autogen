@@ -34,7 +34,7 @@ const matches = [
   ///(?<=<fa\s+icon="+).*?(?=")/g // Get icons within components
   //   /icon=['"]([a-z-]+)['"]|:icon=\"\[['"](fa[a-z])['"],.*['"]([a-z-]+)['"]\]/g,
   new RegExp(
-    `<(?:fa|${componentName})\\s+icon=['"]([a-z-]+)['"]|<${componentName}\\s+:icon=\"\[['"](fa[a-z])['"],[ ]{0,1}['"]([a-z-]+)['"]\]|<FontAwesomeIcon\\s+icon=['"]([a-z-]+)['"]|<FontAwesomeIcon\\s+icon={\[['"](fa[a-z])['"],[ ]{0,1}['"]([a-z-]+)['"]\]}`,
+    `<(?:fa|${componentName})\\s+icon=['"]([a-z-]+)['"]|<${componentName}\\s+:icon=['"]\\[['"](fa[a-z])['"],[ ]{0,1}['"]([a-z-]+)['"]\\]|<FontAwesomeIcon\\s+icon=['"]([a-z-]+)['"]|<FontAwesomeIcon\\s+icon={\\[['"](fa[a-z])['"],[ ]{0,1}['"]([a-z-]+)['"]\\]}`,
     "g"
   ),
 ];
