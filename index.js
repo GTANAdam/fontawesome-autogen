@@ -99,7 +99,9 @@ function getFiles(path) {
     (file) =>
       file.indexOf(".vue") > -1 ||
       file.indexOf(".jsx") > -1 ||
-      file.indexOf(".js") > -1
+      file.indexOf(".js") > -1 ||
+      file.indexOf(".tsx") > -1 ||
+      file.indexOf(".ts") > -1
   );
 }
 
